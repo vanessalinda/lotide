@@ -22,8 +22,27 @@ const flatten = (arr) => {
 
 //Test code
 console.log(flatten([1, 2, [3, 4], 5, [6]]));
+console.log(
+  flatten([
+    [5, "cherries"],
+    [10, "bananas"],
+    [3, "pineapples"],
+  ])
+);
 
+//Test assertions
 const flatArray = [1, 2, [3, 4], 5, [6]];
-flatten(flatArray); // no need to capture return value for this test case
-// Make sure the original array was not altered by the without function
+flatten(flatArray);
 assertArraysEqual(flatArray, [1, 2, [3, 4], 5, [6]]);
+
+const numFruit = [
+  [5, "cherries"],
+  [10, "bananas"],
+  [3, "pineapples"],
+];
+flatten(numFruit);
+assertArraysEqual(numFruit, [
+  [5, "cherries"],
+  [10, "bananas"],
+  [3, "pineapples"],
+]);

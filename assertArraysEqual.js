@@ -13,6 +13,6 @@ const assertArraysEqual = (arr1, arr2) => {
     : console.log("The arrays are different.");
 };
 
-//Test cases
+//Test code
 assertArraysEqual(["1", "2", "3"], ["1", "2", "3"]);
 assertArraysEqual(["1", "2", "3"], ["1", "2", 3]);
