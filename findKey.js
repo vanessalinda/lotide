@@ -9,15 +9,50 @@ const findKey = (obj, callback) => {
   }
 };
 
-const results = findKey(
-  {
-    "Blue Hill": { stars: 1 },
-    Akaleri: { stars: 3 },
-    noma: { stars: 2 },
-    elBulli: { stars: 3 },
-    Ora: { stars: 2 },
-    Akelarre: { stars: 3 },
-  },
-  (x) => x.stars === 2
-); // => "noma"
-console.log(results);
+//Test assertion
+const assertEqual = (actual, expected) => {
+  if (actual === expected)
+    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
+  if (actual !== expected)
+    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
+};
+
+//Test cases
+assertEqual(
+  findKey(
+    {
+      "Blue Hill": { stars: 1 },
+      Akaleri: { stars: 3 },
+      noma: { stars: 2 },
+      elBulli: { stars: 3 },
+      Ora: { stars: 2 },
+      Akelarre: { stars: 3 },
+    },
+    (x) => x.stars === 2
+  ),
+  "noma"
+);
+
+const fruitCount = {
+  cherries: { boxes: 2 },
+  apples: { boxes: 3 },
+  pears: { boxes: 5 },
+  bananas: { boxes: 2 },
+};
+
+assertEqual(
+  findKey(fruitCount, (x) => x.boxes === 5),
+  "pears"
+);
+
+const names = {
+  Vanessa: { lastName: "Power" },
+  Sonia: { lastName: "Chang" },
+  Samantha: { lastName: "Power" },
+  Sophie: { lastName: "Carter" },
+  Andre: { lastName: "Marziali" },
+};
+assertEqual(
+  findKey(names, (x) => x.lastName === "Carter"),
+  "Sophie"
+);
