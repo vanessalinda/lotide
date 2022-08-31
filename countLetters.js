@@ -23,3 +23,5 @@ assertEqual(hello["l"], 2);
 
 const lighthouse = countLetters("lighthouse in the house");
 assertEqual(lighthouse["h"], 4);
+
+module.exports = countLetters;

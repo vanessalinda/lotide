@@ -31,3 +31,5 @@ const fruitCount = {
 
 assertEqual(findKeyByValue(fruitCount, 20), "cherries");
 assertEqual(findKeyByValue(fruitCount, 2), "pears");
+
+module.exports = findKeyByValue;

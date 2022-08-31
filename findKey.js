@@ -56,3 +56,5 @@ assertEqual(
   findKey(names, (x) => x.lastName === "Carter"),
   "Sophie"
 );
+
+module.exports = findKey;

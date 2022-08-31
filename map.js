@@ -34,3 +34,5 @@ assertArraysEqual(results2, [10, 50, 100, 200, 400, 800]);
 const pigLatin = ["lighthouse", "in", "the", "lab"];
 const results3 = map(pigLatin, (word) => word.slice(1) + word[0] + "ay");
 assertArraysEqual(results3, ["ighthouselay", "niay", "hetay", "ablay"]);
+
+module.exports = map;

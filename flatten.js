@@ -1,3 +1,5 @@
+const { findKeyByValue } = require(".");
+
 const eqArrays = (arr1, arr2) => {
   const str1 = arr1
     .map((el) => (typeof el === "string" ? `S${el}` : `N${el}`))
@@ -46,3 +48,5 @@ assertArraysEqual(numFruit, [
   [10, "bananas"],
   [3, "pineapples"],
 ]);
+
+module.exports = flatten;

@@ -37,3 +37,5 @@ assertArraysEqual(words, ["hello", "world", "lighthouse"]);
 const nums = [2, 8, 3, 7, 5, 6];
 without(nums, [3, 7]);
 assertArraysEqual(nums, [2, 8, 3, 7, 5, 6]);
+
+module.exports = without;
