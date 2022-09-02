@@ -2,7 +2,7 @@
   "name": "@vanessalinda/lotide",
   "version": "1.0.0",
   "description": "The Lotide project is a modular collection of functions that operate on data, namely Arrays and Objects.",
-  "main": "assertArraysEqual.js",
+  "main": "index.js",
   "directories": {
     "test": "test"
   },
